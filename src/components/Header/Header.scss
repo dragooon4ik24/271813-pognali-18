@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.Header {
+    padding-top: 22px;
+    padding-bottom: 7px;
+
+    background-color: $color_background-dark-blue;
+
+    @include tablet {
+        padding-top: 40px;
+        padding-bottom: 12px;
+
+        background-color: $color_background-blue;
+    }
+
+    @include desktop {
+        padding-top: 49px;
+
+        background-color: $color_background-dark-blue;
+    }
+
+    &_active {
+        background-color: white;
+
+        @include desktop {
+            background-color: $color_background-dark-blue;
+        }
+    }
+}
+
+.Header-Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

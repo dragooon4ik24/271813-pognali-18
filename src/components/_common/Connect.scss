@@ -1,0 +1,76 @@
+@import 'styles/variables';
+
+.Connect {
+    display: none;
+
+    @include tablet {
+        display: flex;
+    }
+
+    .Banner & {
+        display: flex;
+        margin-bottom: 28px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.Connect-Contacts {
+    display: flex;
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+}
+
+.Connect-Element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:active {
+        svg {
+            opacity: 0.3;
+        }
+    }
+
+    &_phone {
+        background-color: $color_colorful-orange;
+
+        &:hover {
+            background-color: $color_bright-orange;
+        }
+    }
+
+    &_mail {
+        background-color: $color_light-orange;
+
+        svg {
+            height: 14px;
+        }
+
+        &:hover {
+            background-color: $color_colorful-orange;
+        }
+    }
+
+    .Banner & {
+        width: 40px;
+        height: 40px;
+    }
+}

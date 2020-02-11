@@ -1,0 +1,120 @@
+@import 'styles/variables';
+
+.BusinessTariffs {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 84.3%;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 89.6%;
+        max-width: 750px;
+        border-radius: 30px;
+    }
+}
+
+.BusinessTariffs-Container {
+    padding-top: 31px;
+
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 20px 50px 0px rgba($color: $color_font-blue, $alpha: 0.1);
+
+    @include desktop {
+        padding-top: 47px;
+    }
+}
+
+.BusinessTariffs-Wrapper {
+    padding: 0 9.2%;
+
+    max-height: 400px;
+    overflow: auto;
+
+    @include desktop {
+        max-height: 500px;
+    }
+}
+
+.BusinessTariffs-Title {
+    margin-bottom: 27px;
+
+    text-align: center;
+
+    @include tablet {
+        margin-bottom: 44px;
+    }
+}
+
+.BusinessTariffs-Table {
+    width: 100%;
+    margin-bottom: 33px;
+
+    @include tablet {
+        margin-bottom: 51px;
+    }
+}
+
+.BusinessTariffs-TableRow {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0 14px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 14px 0 16px;
+
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+.BusinessTariffs-TableRow {
+    border-top: 1px solid rgba($color: black, $alpha: 0.05);
+}
+
+.BusinessTariffs-TableRow:last-child {
+    border-bottom: 1px solid rgba($color: black, $alpha: 0.05);
+}
+
+.BusinessTariffs-Button {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color_font-blue;
+
+    border-radius: 0 0 20px 20px;
+    background-color: $color_button-gray;
+
+    @include tablet {
+        padding-top: 41px;
+        padding-bottom: 43px;
+
+        text-transform: none;
+        font-size: 24px;
+
+        border-radius: 0 0 30px 30px;
+    }
+
+    &:hover {
+        background-color: $color_background-gray;
+    }
+
+    &:active {
+        color: rgba($color_font-blue, 0.3);
+    }
+}

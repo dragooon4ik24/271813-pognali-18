@@ -1,0 +1,33 @@
+@import 'mixins';
+
+$color_bright-orange: #f26926;
+$color_colorful-orange: #ff8d30;
+$color_orange: #ffa530;
+$color_light-orange: #ffbd30;
+$color_yellow-orange: #ffd74b;
+$color_blue: #192144;
+$color_hover-blue: #101d41;
+$color_colorful-blue: #132576;
+$color_background-dark-blue: #161c36;
+$color_background-blue: #182044;
+$color_background-gray: #edeff6;
+$color_pseudo-blue: #141b3b;
+$color_button-gray: #f3f4f8;
+$color_light-gray: #cccccc;
+$color_dark-gray: #e2e5f2;
+$color_contacts-blue: #121936;
+$color_font-gray: #444444;
+$color_font-blue: #1d2e5b;
+$color_offline-red: #f97676;
+$color_invalid-red: #ffefef;
+$color_online-green: #81e31e;
+
+$font_path: '../assets/fonts';
+$font_family: BloggerSans,
+sans-serif;
+
+$breakpoint_tablet: 680px;
+$breakpoint_desktop: 1400px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

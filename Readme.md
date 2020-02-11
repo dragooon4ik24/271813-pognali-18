@@ -1,60 +1,68 @@
-# Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* Студент: [Anton Shafner](https://up.htmlacademy.ru/adaptive/18/user/271813).
-* Наставник: `Неизвестно`.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+### `npm start`
 
-Полезный файл:
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Памятка
+### `npm run build`
 
-#### 1. Зарегистрируйтесь на Гитхабе
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-#### 2. Создайте форк
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/271813-pognali-18) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+### `npm run eject`
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808227-6eee8a00-a190-11e9-9b7e-06ce2b06ba16.jpg">
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Получится вот так:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808229-6eee8a00-a190-11e9-8b67-371cd191fc0d.jpg">
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-#### 3. Клонируйте репозиторий на свой компьютер
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
+## Learn More
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808230-6eee8a00-a190-11e9-8575-9080503a6017.jpg">
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Клонировать репозиторий можно так:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```
-git clone SSH-адрес_вашего_форка
-```
+### Code Splitting
 
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-#### 4. Начинайте обучение!
+### Analyzing the Bundle Size
 
----
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
+### Making a Progressive Web App
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 2](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/271813-pognali-18.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/271813-pognali-18
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/271813-pognali-18/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/271813-pognali-18?type=dev
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

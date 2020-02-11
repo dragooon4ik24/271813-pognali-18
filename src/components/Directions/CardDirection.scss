@@ -1,0 +1,123 @@
+@import 'styles/variables';
+
+.CardDirection {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.CardDirection-Img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px 10px 0 0;
+
+    @include tablet {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.CardDirection-Info {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    padding: 25px 9% 23px;
+
+    border-radius: 10px;
+    background-color: white;
+
+    @include tablet {
+        flex-direction: column;
+        order: -1;
+        flex-grow: 1;
+        margin-top: 0;
+        padding: 29px 4.9% 20px;
+
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+.CardDirection-FlagImg {
+    position: absolute;
+    top: 0;
+    left: 9%;
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 24px;
+
+    @include tablet {
+        left: auto;
+        right: 0;
+        top: 16px;
+        transform: translateX(50%);
+
+        width: 70px;
+        height: 47px;
+    }
+}
+
+.CardDirection-Title {
+    margin-bottom: 4px;
+
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    color: $color_background-dark-blue;
+
+    @include tablet {
+        margin-bottom: 6px;
+
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+.CardDirection-Description,
+.CardDirection-Count {
+    font-size: 16px;
+    line-height: 18px;
+    color: $color_font-gray;
+
+    opacity: 0.3;
+
+    @include tablet {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+.CardDirection-Count {
+    position: relative;
+
+    padding-top: 3px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 6px;
+        left: -20px;
+
+        width: 11px;
+        height: 11px;
+
+        background: url('../../assets/images/icons/user.svg');
+        opacity: 0.33;
+    }
+
+    @include tablet {
+        padding-top: 0;
+        padding-left: 32px;
+
+        &::before {
+            left: 0;
+            top: -1px;
+
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

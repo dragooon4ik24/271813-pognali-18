@@ -1,41 +1,59 @@
 {
-  "name": "pognali-18",
-  "version": "17.0.0",
-  "private": true,
-  "description": "Личный проект «Погнали» от HTML Academy",
-  "devDependencies": {
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
-    "gulp-less": "4.0.x",
-    "gulp-plumber": "1.2.x",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-postcss": "8.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
-    "start": "gulp start"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ],
-  "editorconfig-cli": [
-    "*.json",
-    "*.js",
-    "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/less/**/*.less"
-  ],
-  "engines": {
-    "node": "8.16"
-  }
+    "name": "pognali",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "classnames": "2.2.6",
+        "normalize.css": "8.0.1",
+        "picturefill": "3.0.3",
+        "prop-types": "15.7.2",
+        "react": "16.12.0",
+        "react-app-polyfill": "1.0.5",
+        "react-dom": "16.12.0",
+        "react-reveal": "1.2.2",
+        "react-scripts": "3.3.0",
+        "react-typist": "2.0.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "eslint": "node_modules/.bin/eslint src/ --max-warnings=0"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all",
+            "IE 11"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version",
+            "IE 11"
+        ]
+    },
+    "devDependencies": {
+        "husky": "4.2.1",
+        "lint-staged": "10.0.7",
+        "node-sass": "4.13.0",
+        "prettier": "1.19.1"
+    },
+    "lint-staged": {
+        "*.(js|jsx)": [
+            "npm run eslint",
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
 }

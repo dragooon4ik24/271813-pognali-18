@@ -1,0 +1,61 @@
+@import 'styles/variables';
+
+.ButtonMenu {
+    position: relative;
+
+    width: 25px;
+    height: 11px;
+    padding: 15px 20px;
+    margin-right: -7.5px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 62.5%;
+        height: 3px;
+
+        border-radius: 3px;
+        background-color: white;
+
+        transition: transform 0.5s;
+    }
+
+    &::before {
+        top: 8px;
+    }
+
+    &::after {
+        bottom: 9px;
+    }
+
+    &_opened {
+
+        &::before,
+        &::after {
+            height: 2px;
+
+            background-color: $color_light-gray;
+        }
+
+        &::before {
+            transform: translateY(5px) translateX(-12px) rotate(45deg);
+        }
+
+        &::after {
+            transform: translateY(-6px) translateX(-12px) rotate(-45deg);
+        }
+    }
+
+    @include desktop {
+        display: none;
+    }
+}

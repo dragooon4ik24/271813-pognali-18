@@ -1,0 +1,41 @@
+@mixin tablet {
+    @media (min-width: $breakpoint_tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint_desktop) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+        @content;
+    }
+}
+
+@mixin light-white-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    color: white;
+
+    @include tablet {
+        font-size: 28px;
+        line-height: 33px;
+    }
+}
+
+@mixin bold-white-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    color: white;
+
+    @include tablet {
+        font-size: 21px;
+        line-height: 25px;
+    }
+}

@@ -1,0 +1,199 @@
+@import 'styles/variables';
+
+.Companions {
+    position: relative;
+    z-index: 4;
+
+    margin-top: -30px;
+    padding-top: 69px;
+    padding-bottom: 30px;
+
+    border-radius: 0 0 30px 30px;
+    background-color: $color_blue;
+    background-image: url('../../assets/images/backgrounds/rogovaya-back-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-position: top 344px left -10px;
+    background-size: 22.2% auto;
+
+    @include retina {
+        background-image: url('../../assets/images/backgrounds/rogovaya-back-mobile@2x.png');
+    }
+
+    @include tablet {
+        margin-top: -60px;
+        padding-top: 140px;
+        padding-bottom: 88px;
+
+        border-radius: 0 0 60px 60px;
+        background-image: none;
+    }
+
+    @include desktop {
+        padding-bottom: 0;
+    }
+}
+
+.Companions-Container {
+    position: relative;
+
+    padding-top: 30px;
+
+    background-image: url('../../assets/images/backgrounds/smolov-back-desktop@1x.png');
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
+    background-size: 53% auto;
+
+    @include retina {
+        background-image: url('../../assets/images/backgrounds/smolov-back-desktop@2x.png');
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        z-index: 1;
+        top: 0;
+        left: -44px;
+
+        width: 48.9%;
+        height: 132px;
+
+        border-radius: 20px;
+        background-color: $color_pseudo-blue;
+    }
+
+    @include tablet {
+        padding: 60px 5% 0;
+
+        background-image: url('../../assets/images/backgrounds/rogovaya-back-desktop@1x.png'),
+            url('../../assets/images/backgrounds/smolov-back-desktop@1x.png');
+        background-position: top 0 right 8.7%, left 0 top 347px;
+        background-size: 41.4% auto, 20.7% auto;
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/rogovaya-back-desktop@2x.png'),
+                url('../../assets/images/backgrounds/smolov-back-desktop@2x.png');
+        }
+
+        &::before {
+            left: 0;
+
+            width: 31%;
+            height: 213px;
+        }
+    }
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: 44.7% 50.5%;
+        grid-template-rows: auto auto;
+        grid-column-gap: 4.8%;
+        padding-left: 5.4%;
+        padding-right: 0;
+        padding-bottom: 134px;
+
+        background-position: top 316px left 13%, top 60px left 41%;
+        background-size: 21.6% auto, 10.8% auto;
+
+        &::before {
+            width: 16.1%;
+        }
+    }
+}
+
+.Companions-Wrapper {
+    position: relative;
+    z-index: 2;
+
+    padding: 0 9.3%;
+
+    @include tablet {
+        padding: 0;
+        width: 71%;
+    }
+
+    @include desktop {
+        width: 78.5%;
+    }
+}
+
+.Companions-Title {
+    margin-bottom: 20px;
+
+    @include tablet {
+        margin-bottom: 57px;
+    }
+}
+
+.Companions-Description {
+    @include light-white-text;
+
+    margin-bottom: 25px;
+
+    @include tablet {
+        margin-bottom: 42px;
+    }
+}
+
+.Companions-Text {
+    @include bold-white-text;
+
+    margin-bottom: 61px;
+}
+
+.Companions-List {
+    position: relative;
+    z-index: 10;
+
+    margin-bottom: 20px;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    @include desktop {
+        grid-row: 1 / -1;
+        grid-column: 2 / -1;
+        margin-bottom: 0;
+    }
+}
+
+.Companions-Card {
+    transition: transform 0.5s;
+
+    @include tablet {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.Companions-Card:not(:last-child) {
+    margin-bottom: 10px;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
+.Companions-Card {
+    @include tablet {
+        width: 46%;
+    }
+
+    @include desktop {
+        width: 45.2%;
+    }
+}
+
+.Companions-Button {
+    width: 100%;
+
+    @include desktop {
+        width: 50%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}

@@ -1,0 +1,112 @@
+@import 'styles/variables';
+
+.Footer {
+    position: relative;
+    z-index: 5;
+    margin-top: -30px;
+    padding-top: 38px;
+    padding-bottom: 14px;
+
+    border-radius: 30px 30px 0 0;
+    background-color: white;
+
+    @include tablet {
+        margin-top: -60px;
+        padding-top: 48px;
+        padding-bottom: 46px;
+        border-radius: 60px 60px 0 0;
+    }
+}
+
+.Footer-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.Footer-Logo {
+    margin-bottom: 41px;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
+.Footer-LogoImg {
+    width: 100px;
+    height: 19px;
+
+    @include tablet {
+        width: 166px;
+        height: 42px;
+    }
+
+    @include desktop {
+        width: 200px;
+        height: 52px;
+    }
+}
+
+.Footer-Developed {
+    position: relative;
+
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: $color_font-gray;
+        opacity: 0.05;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    @include tablet {
+        width: 153px;
+        padding-top: 0;
+
+        &::before {
+            content: none;
+        }
+    }
+}
+
+.Footer-DevelopedText {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color_font-gray;
+
+    @include tablet {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.Footer-DevelopedLogo {
+    fill: $color_blue;
+
+    path {
+        fill: $color_blue;
+    }
+}

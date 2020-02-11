@@ -1,0 +1,281 @@
+@import 'styles/variables';
+
+.Tariffs {
+    position: relative;
+    z-index: 10;
+
+    padding-top: 50px;
+    padding-bottom: 27px;
+
+    border-radius: 0 0 30px 30px;
+    background-color: $color_background-gray;
+
+    @include tablet {
+        padding-top: 70px;
+        padding-bottom: 74px;
+
+        border-radius: 0 0 60px 60px;
+    }
+
+    @include desktop {
+        padding-top: 102px;
+        padding-bottom: 177px;
+    }
+}
+
+.Tariffs-Container {
+    padding-left: 9.3%;
+
+    @include tablet {
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+.Tariffs-Title {
+    width: 60%;
+    margin-bottom: 42px;
+
+    @include tablet {
+        width: auto;
+        margin-bottom: 70px;
+
+        text-align: center;
+    }
+
+    @include desktop {
+        margin-bottom: 130px;
+    }
+}
+
+.Tariffs-Wrapper {
+    @include tablet {
+        padding-left: 13.2%;
+    }
+
+    @include desktop {
+        padding-left: 12.2%;
+    }
+}
+
+.Tariffs-Table {
+    position: relative;
+
+    width: 81.6%;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $color_font-gray;
+
+    tbody {
+        counter-reset: table 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: -125px;
+        right: -44px;
+
+        width: 99px;
+        height: 99px;
+
+        background-image: url('../../assets/images/backgrounds/rates@1x.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/rates@2x.png');
+        }
+    }
+
+    @media (min-width: 329px) {
+        &::after {
+            top: -110px;
+        }
+    }
+
+    @include tablet {
+        width: 94.1%;
+        margin-bottom: 46px;
+
+        font-size: 28px;
+        line-height: 30px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -43px;
+            right: -35px;
+
+            width: 198px;
+            height: calc(100% + 86px);
+
+            border-radius: 20px;
+            background-color: $color_dark-gray;
+        }
+
+        &::after {
+            top: auto;
+            bottom: -117px;
+            right: 11px;
+        }
+    }
+
+    @include desktop {
+        width: 70.2%;
+
+        &::before {
+            top: -51px;
+            right: -159px;
+
+            width: 444px;
+            height: calc(100% + 102px);
+        }
+
+        &::after {
+            bottom: auto;
+            top: 50%;
+            right: -271px;
+            transform: translateY(-50%);
+
+            width: 198px;
+            height: 198px;
+        }
+    }
+}
+
+.Tariffs-TableRow {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0 13px;
+
+    border-top: 1px solid rgba($color: black, $alpha: 0.05);
+
+    &::before {
+        position: absolute;
+        counter-increment: table;
+        content: counter(table);
+        top: 14px;
+        right: -31px;
+
+        color: white;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        top: 6px;
+        right: -44px;
+
+        width: 34px;
+        height: 34px;
+
+        border-radius: 50%;
+        background-color: $color_orange;
+    }
+
+    &:nth-child(2n) {
+        &::after {
+            background-color: $color_light-orange;
+        }
+    }
+
+    &:nth-child(3n) {
+        &::after {
+            background-color: $color_yellow-orange;
+        }
+    }
+
+    &:last-child {
+        border-bottom: 1px solid rgba($color: black, $alpha: 0.05);
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 17px;
+        padding-bottom: 18px;
+
+        &::before {
+            top: 16px;
+            right: auto;
+            left: -65px;
+        }
+
+        &::after {
+            top: -1px;
+            right: auto;
+            left: -91px;
+
+            width: 67px;
+            height: 67px;
+        }
+    }
+}
+
+.Tariffs-Button {
+    display: block;
+    padding: 10px 0;
+
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: $color_blue;
+
+    @include tablet {
+        position: relative;
+
+        font-size: 20px;
+        line-height: 20px;
+        color: $color_colorful-blue;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -10px;
+            left: -91px;
+
+            width: 67px;
+            height: 67px;
+
+            border-radius: 50%;
+            background-color: $color_dark-gray;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 11px;
+            left: -64px;
+
+            width: 17px;
+            height: 21px;
+
+            background-image: url('../../assets/images/icons/business.svg');
+            background-repeat: no-repeat;
+            background-size: 17px 21px;
+        }
+
+        &:hover {
+            color: rgba($color_colorful-blue, 0.7);
+
+            &::after {
+                opacity: 0.7;
+            }
+        }
+
+        &:active {
+            color: rgba($color_colorful-blue, 0.3);
+
+            &::after {
+                opacity: 0.3;
+            }
+        }
+    }
+}

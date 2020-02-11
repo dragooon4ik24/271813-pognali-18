@@ -1,0 +1,123 @@
+@import 'styles/variables';
+
+.Banner {
+    padding: 40px 0;
+
+    background-color: $color-background-dark-blue;
+    background-image: url('../../assets/images/backgrounds/traveller-illustration-mobile@1x.png'),
+        linear-gradient(to top, $color_blue 0px, $color_blue 274px, $color_background-dark-blue 274px, $color_background-dark-blue 565px, transparent 565px, transparent 100%),
+        url('../../assets/images/backgrounds/globe-back-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: left 61% bottom 565px, 0 0, 0 -50px;
+    background-size: 192px 255px, auto, 320px auto;
+
+    @include retina {
+        background-image: url('../../assets/images/backgrounds/traveller-illustration-mobile@2x.png'),
+            linear-gradient(to top, $color_blue 0px, $color_blue 274px, $color_background-dark-blue 274px, $color_background-dark-blue 565px, transparent 565px, transparent 100%),
+            url('../../assets/images/backgrounds/globe-back-mobile@2x.jpg');
+    }
+
+    @include tablet {
+        padding: 60px 0 96px;
+
+        background-color: $color_background-blue;
+        background-image: url('../../assets/images/backgrounds/traveller-illustration-tablet@1x.png'),
+            linear-gradient(to top, $color_blue 233px, transparent 233px, transparent 100%),
+            url('../../assets/images/backgrounds/globe-back-tablet@1x.jpg');
+        background-position: left 72% bottom 370px, 0 0, left 53% bottom 200px;
+        background-size: 372px 451px, auto, 200%;
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/traveller-illustration-tablet@2x.png'),
+                linear-gradient(to top, $color_blue 233px, transparent 233px, transparent 100%),
+                url('../../assets/images/backgrounds/globe-back-tablet@2x.jpg');
+        }
+    }
+
+    @media (min-width: 1000px) {
+        background-size: 372px 451px, auto, 2000px auto;
+    }
+
+    @include desktop {
+        padding: 100px 0 123px;
+
+        background-color: $color_background-dark-blue;
+        background-image: url('../../assets/images/backgrounds/traveller-illustration-desktop@1x.png'),
+            url('../../assets/images/backgrounds/globe-back-desktop@1x.jpg');
+        background-position: left 59% bottom, left 52% bottom 10%;
+        background-size: 431px 640px, 120%;
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/traveller-illustration-desktop@2x.png'),
+                url('../../assets/images/backgrounds/globe-back-desktop@2x.jpg');
+        }
+    }
+}
+
+.Banner-Wrapper {
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 5.3%;
+    }
+}
+
+.Banner-Title {
+    margin: 0 0 247px 0;
+
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+
+    @include tablet {
+        margin-bottom: 88px;
+
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    @include desktop {
+        margin-bottom: 105px;
+
+        text-align: left;
+    }
+}
+
+.Banner-Feedback {
+    box-sizing: content-box;
+    width: 165px;
+    margin-bottom: 33px;
+    padding-left: 9.3%;
+
+    @include tablet {
+        width: 270px;
+        margin-bottom: 213px;
+        padding-left: 5%;
+    }
+
+    @include desktop {
+        width: 285px;
+        padding-top: 20px;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+.Banner-FeedbackText {
+    margin: 0 0 23px 0;
+
+    @include light-white-text;
+
+    @include tablet {
+        margin-bottom: 45px;
+    }
+}
+
+.Banner-FeedbackAuthor {
+    margin: 0;
+
+    @include bold-white-text;
+}

@@ -1,0 +1,119 @@
+@import 'styles/variables';
+
+.Navigation {
+    display: none;
+
+    @include desktop {
+        display: block;
+        margin-right: auto;
+        margin-left: 11%;
+        width: 29.5%;
+    }
+
+    .DropdownMenu_opened & {
+        display: block;
+        padding-top: 70px;
+        margin-bottom: 50px;
+
+        @include tablet {
+            padding-top: 90px;
+            margin-bottom: 135px;
+        }
+    }
+}
+
+.Navigation-List {
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+
+    &::after {
+        display: none;
+
+        @include desktop {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: -27%;
+            transform: translateY(-50%);
+
+            display: block;
+            width: 15.4%;
+            height: 2px;
+
+            background-color: white;
+        }
+    }
+}
+
+.Navigation-List {
+    .DropdownMenu & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            align-items: flex-start;
+        }
+    }
+}
+
+.Navigation-Link {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+    overflow: hidden;
+
+    span {
+        display: block;
+        position: relative;
+        transition: transform 0.3s;
+
+        &::before {
+            position: absolute;
+            content: attr(data-hover);
+            left: 0;
+            top: 100%;
+            color: $color_yellow-orange;
+
+            width: 100%;
+
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &:hover {
+        span {
+            transform: translateY(-100%);
+        }
+    }
+
+    &:active {
+        span {
+            &::before {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .DropdownMenu & {
+        font-size: 30px;
+        line-height: 36px;
+        text-transform: uppercase;
+        color: $color_blue;
+
+        @include tablet {
+            font-size: 60px;
+            line-height: 71px;
+        }
+    }
+}

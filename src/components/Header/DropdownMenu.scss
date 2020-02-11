@@ -1,0 +1,16 @@
+@import 'styles/variables';
+
+.DropdownMenu {
+    position: absolute;
+    z-index: 100;
+
+    background-color: white;
+
+    @include tablet {
+        padding-left: 97px;
+    }
+
+    @include desktop {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+@import 'styles/variables';
+
+.Map {
+    position: relative;
+    z-index: 2;
+    height: 332px;
+    margin-top: -30px;
+
+    background-image: url('../../assets/images/backgrounds/map-mobile@1x.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include retina {
+        background-image: url('../../assets/images/backgrounds/map-mobile@2x.jpg');
+    }
+
+    @include tablet {
+        margin-top: -60px;
+        height: 581px;
+
+        background-image: url('../../assets/images/backgrounds/map-tablet@1x.jpg');
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/map-tablet@2x.jpg');
+        }
+    }
+
+    @include desktop {
+        height: 516px;
+
+        background-image: url('../../assets/images/backgrounds/map-desktop@1x.jpg');
+
+        @include retina {
+            background-image: url('../../assets/images/backgrounds/map-desktop@2x.jpg');
+        }
+    }
+}

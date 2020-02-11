@@ -1,0 +1,170 @@
+@import 'styles/variables';
+
+.Address {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -30px;
+    padding-top: 62px;
+    padding-bottom: 35px;
+
+    border-radius: 0 0 30px 30px;
+    background-color: $color_yellow-orange;
+
+    @include tablet {
+        margin-top: -60px;
+        padding-top: 107px;
+        padding-bottom: 85px;
+
+        border-radius: 0 0 60px 60px;
+    }
+
+    @include desktop {
+        padding-top: 114px;
+        padding-bottom: 60px;
+    }
+}
+
+.Address-Container {
+    @include tablet {
+        padding: 0 5.1%;
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16.9%;
+        padding-right: 5.6%;
+    }
+}
+
+.Address-Text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color_contacts-blue;
+
+    @include tablet {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+.Address-Wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include tablet {
+        margin-bottom: 44px;
+    }
+
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+
+.Address-IconBox {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+
+    border-radius: 50%;
+    background-color: $color_contacts-blue;
+
+    @include tablet {
+        width: 68px;
+        height: 68px;
+        margin-right: 27px;
+    }
+
+    @include desktop {
+        width: 90px;
+        height: 90px;
+        margin-right: 32px;
+    }
+}
+
+.Address-Icon {
+    path {
+        fill: $color_yellow-orange;
+    }
+
+    @include tablet {
+        width: 21px;
+        height: 32px;
+    }
+}
+
+.Address-Link {
+    position: relative;
+
+    display: block;
+    padding: 20px 7.8% 18px;
+
+    font-size: 18px;
+    line-height: 18px;
+    color: $color_font-blue;
+
+    border-radius: 10px;
+    border: 3px solid $color_blue;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 7.4%;
+        transform: translateY(-50%);
+
+        border: 10px solid $color_font-blue;
+        border-top-width: 7px;
+        border-bottom-width: 7px;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &:hover {
+        color: white;
+        background-color: $color_blue;
+
+        &:before {
+            border-left-color: white;
+        }
+    }
+
+    &:active {
+        color: rgba(white, 0.3);
+
+        &:before {
+            border-left-color: rgba(white, 0.3);
+        }
+    }
+
+    @include tablet {
+        padding: 24px 34px 28px;
+
+        font-size: 24px;
+        line-height: 24px;
+
+        border-radius: 20px;
+
+        &::before {
+            right: 5.5%;
+        }
+    }
+
+    @include desktop {
+        width: 31.7%;
+
+        &::before {
+            right: 33px;
+        }
+    }
+}
