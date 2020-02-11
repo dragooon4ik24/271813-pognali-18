@@ -2,6 +2,7 @@
     "name": "pognali",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://dragooon4ik24.github.io/pognali/",
     "dependencies": {
         "classnames": "2.2.6",
         "normalize.css": "8.0.1",
@@ -19,7 +20,9 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "eslint": "node_modules/.bin/eslint src/ --max-warnings=0"
+        "eslint": "node_modules/.bin/eslint src/ --max-warnings=0",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -39,6 +42,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "2.2.0",
         "husky": "4.2.1",
         "lint-staged": "10.0.7",
         "node-sass": "4.13.0",
